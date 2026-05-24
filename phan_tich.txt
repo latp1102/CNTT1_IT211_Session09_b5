@@ -1,0 +1,7 @@
+1.JSON log dễ parse và truy vấn tự động
+JSON lưu dữ liệu theo dạng key-value.
+Hệ thống monitor có thể lọc ngay tất cả log ERROR hoặc requestId cụ thể mà không cần xử lý chuỗi text.
+2. Hỗ trợ Dashboard và Alert theo thời gian thực
+Có thể thống kê số lượng ERROR theo phút
+Có thể vẽ biểu đồ lỗi theo service
+Có thể tạo cảnh báo khi số lỗi vượt ngưỡng
