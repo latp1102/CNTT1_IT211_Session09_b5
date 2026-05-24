@@ -1,4 +1,4 @@
-package org.example.session09_b5.Service;
+package org.example.session09_b5.service;
 
 import org.springframework.stereotype.Service;
 

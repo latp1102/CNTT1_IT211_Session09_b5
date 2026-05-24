@@ -1,7 +1,7 @@
 package org.example.session09_b5.controller;
 
 import lombok.RequiredArgsConstructor;
-import org.example.session09_b5.Service.OrderService;
+import org.example.session09_b5.service.OrderService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -14,5 +14,4 @@ public class OrderController {
         orderService.createOrder();
         return "ok";
     }
-
 }
