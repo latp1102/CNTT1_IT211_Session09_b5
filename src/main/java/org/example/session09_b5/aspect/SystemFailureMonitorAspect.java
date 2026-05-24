@@ -12,16 +12,10 @@ import java.util.UUID;
 @Component
 @Slf4j
 public class SystemFailureMonitorAspect {
-    @AfterThrowing(pointcut = "execution(* org.example.session09_b5.Service.*.*(..))", throwing = "ex")
+    @AfterThrowing(pointcut = "execution(* org.example.session09_b5.service.*.*(..))", throwing = "ex")
     public void monitorSystemFailure(Exception ex) {
-        try {
-            String requestId = UUID.randomUUID().toString();
-            MDC.put("requestId", requestId);
-            log.error("lỗi: {}", ex.getMessage(), ex);
-        } catch (Exception e) {
-            log.error("Failed to log system failure", e);
-        }finally {
-            MDC.clear();
-        }
+        MDC.put("requestId", UUID.randomUUID().toString());
+        log.error("Lỗi: {}", ex.getMessage(), ex);
+        MDC.clear();
     }
 }
